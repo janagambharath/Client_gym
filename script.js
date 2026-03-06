@@ -181,13 +181,16 @@ const transformSlides = transformTrack ? transformTrack.children : [];
 
 function moveTransform(dir) {
   const max = transformSlides.length - 1;
-  transformIdx = Math.max(0, Math.min(transformIdx + dir, max));
+  transformIdx = transformIdx + dir;
+  if (transformIdx > max) transformIdx = 0;
+  if (transformIdx < 0) transformIdx = max;
   goTransform(transformIdx);
 }
 function goTransform(i) {
   transformIdx = i;
   if (!transformTrack) return;
-  const w = transformTrack.parentElement.offsetWidth;
+  const slider = transformTrack.closest('.transform-slider');
+  const w = slider ? slider.offsetWidth : transformTrack.offsetWidth;
   transformTrack.style.transform = 'translateX(-' + (i * w) + 'px)';
   document.querySelectorAll('#transformDots .testi-dot').forEach((d, idx) => {
     d.classList.toggle('active', idx === i);
