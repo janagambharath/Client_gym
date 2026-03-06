@@ -882,10 +882,9 @@ footer {
   .cdown-box span:last-child { font-size: 9px; }
   .cdown-sep { font-size: 20px; margin-bottom: 16px; }
 
-  /* Hide right column logo on mobile — already shows in hero left area */
-  .hero-right { display: none; }
-
-  .hero-logo-wrap { width: 160px; height: 160px; margin: 0 auto 12px; }
+  /* Hero right — show logo centered, hide quote card */
+  .hero-right { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .hero-logo-wrap { width: 180px; height: 180px; }
   .hero-quote-card { display: none; }
 }
 
