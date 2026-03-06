@@ -30,6 +30,11 @@ body {
 }
 
 /* ── CUSTOM CURSOR ── */
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot, .cursor-ring { display: none !important; }
+  body { cursor: auto !important; }
+}
+
 .cursor-dot {
   width: 8px; height: 8px;
   background: var(--brand-accent);
