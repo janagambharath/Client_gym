@@ -870,12 +870,13 @@ footer {
 .transform-slider {
   max-width: 700px; margin: 0 auto 60px;
   position: relative;
+  overflow: hidden;
+  border-radius: 24px;
 }
 .transform-track {
   display: flex;
   transition: transform 0.55s cubic-bezier(.22,.9,.29,1);
-  overflow: hidden;
-  border-radius: 24px;
+  will-change: transform;
 }
 .transform-slide {
   flex: 0 0 100%;
