@@ -837,23 +837,62 @@ footer {
   .services-grid { grid-template-columns: 1fr 1fr; } .pricing-grid { grid-template-columns: 1fr 1fr; }
   .price-card.featured { transform: none; }
   .footer-top { flex-direction: column; gap: 40px; }
+  .hero-left { display: flex; flex-direction: column; align-items: center; }
+  .hero-right { flex-direction: column; align-items: center; }
+  .hero-countdown { text-align: center; }
+  .countdown-boxes { justify-content: center; }
 }
 @media (max-width: 768px) {
   header { padding: 0 20px; }
   nav { display: none; }
   .hamburger { display: flex; }
   .section-inner { padding: 70px 24px; }
-  .services-grid, .pricing-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr 1fr; }
   .stats-strip { flex-wrap: wrap; padding: 20px; gap: 0; }
   .stat-item { padding: 16px 24px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); width: 50%; }
-  .testi-card { flex: 0 0 calc(100% - 0px); }
+  .testi-card { flex: 0 0 100%; }
   .form-row { grid-template-columns: 1fr; }
   .footer-top { flex-direction: column; }
   footer { padding: 40px 20px 24px; }
   .cta-strip { padding: 60px 24px; }
-  .hero-content { padding: 100px 24px 60px; }
   .about-features { grid-template-columns: 1fr; }
-  .hero-logo-wrap { width: 200px; height: 200px; }
+
+  /* ── HERO MOBILE ── */
+  .hero-content {
+    grid-template-columns: 1fr;
+    padding: 100px 20px 60px;
+    text-align: center;
+    gap: 32px;
+  }
+  .hero-left { display: flex; flex-direction: column; align-items: center; }
+  .hero-tag { font-size: 11px; padding: 6px 14px; }
+  .hero-h1 { font-size: 32px; }
+  .hero-sub { font-size: 15px; text-align: center; margin: 0 0 28px; }
+  .hero-ctas { justify-content: center; gap: 12px; }
+  .btn-primary { padding: 13px 24px; font-size: 14px; }
+  .btn-ghost { padding: 11px 22px; font-size: 14px; }
+
+  /* Countdown mobile */
+  .hero-countdown { width: 100%; }
+  .countdown-label { text-align: center; font-size: 11px; }
+  .countdown-boxes { justify-content: center; gap: 6px; }
+  .cdown-box { min-width: 56px; padding: 10px 8px; border-radius: 10px; }
+  .cdown-box span:first-child { font-size: 24px; }
+  .cdown-box span:last-child { font-size: 9px; }
+  .cdown-sep { font-size: 20px; margin-bottom: 16px; }
+
+  /* Hide right column logo on mobile — already shows in hero left area */
+  .hero-right { display: none; }
+
+  .hero-logo-wrap { width: 160px; height: 160px; margin: 0 auto 12px; }
+  .hero-quote-card { display: none; }
+}
+
+@media (max-width: 420px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+  .cdown-box { min-width: 48px; padding: 8px 6px; }
+  .cdown-box span:first-child { font-size: 20px; }
 }
 /* ── TRANSFORMATION SLIDESHOW ── */
 .transform-slider {
