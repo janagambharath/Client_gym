@@ -4,7 +4,8 @@
    count-up, testimonial carousel, contact form
    ============================================================ */
 
-// ── CUSTOM CURSOR ──
+// ── CUSTOM CURSOR (desktop only) ──
+if (!window.matchMedia('(hover: none), (pointer: coarse)').matches) {
 const dot = document.getElementById('cursorDot');
 const ring = document.getElementById('cursorRing');
 let mx = 0, my = 0, rx = 0, ry = 0;
@@ -25,6 +26,7 @@ document.querySelectorAll('a,button,.service-card,.feature-chip').forEach(el => 
   el.addEventListener('mouseenter', () => ring.classList.add('hover'));
   el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
 });
+} // end desktop cursor
 
 // ── SCROLL PROGRESS ──
 const progressBar = document.getElementById('progressBar');
