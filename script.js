@@ -150,7 +150,7 @@ function submitForm() {
     'Preferred Time: ' + time + '\n' +
     (message ? 'Message: ' + message : '') + '\n\nI would like to book a session!'
   );
-  window.open('https://wa.me/919912993586?text=' + text, '_blank');
+  window.open('https://wa.me/919912993587?text=' + text, '_blank');
 }
 
 // ── SMOOTH SCROLL ──
