@@ -839,8 +839,6 @@ footer {
   .footer-top { flex-direction: column; gap: 40px; }
   .hero-left { display: flex; flex-direction: column; align-items: center; }
   .hero-right { flex-direction: column; align-items: center; }
-  .hero-countdown { text-align: center; }
-  .countdown-boxes { justify-content: center; }
 }
 @media (max-width: 768px) {
   header { padding: 0 20px; }
@@ -873,25 +871,12 @@ footer {
   .btn-primary { padding: 13px 24px; font-size: 14px; }
   .btn-ghost { padding: 11px 22px; font-size: 14px; }
 
-  /* Countdown mobile */
-  .hero-countdown { width: 100%; }
-  .countdown-label { text-align: center; font-size: 11px; }
-  .countdown-boxes { justify-content: center; gap: 6px; }
-  .cdown-box { min-width: 56px; padding: 10px 8px; border-radius: 10px; }
-  .cdown-box span:first-child { font-size: 24px; }
-  .cdown-box span:last-child { font-size: 9px; }
-  .cdown-sep { font-size: 20px; margin-bottom: 16px; }
-
   /* Hero right — show logo centered, hide quote card */
   .hero-right { display: flex; flex-direction: column; align-items: center; gap: 16px; }
   .hero-logo-wrap { width: 180px; height: 180px; }
   .hero-quote-card { display: none; }
 }
 
-@media (max-width: 420px) {
-  .cdown-box { min-width: 48px; padding: 8px 6px; }
-  .cdown-box span:first-child { font-size: 20px; }
-}
 /* ── TRANSFORMATION SLIDESHOW ── */
 .transform-slider {
   max-width: 700px; margin: 0 auto 60px;
@@ -965,40 +950,6 @@ footer {
 }
 .transform-btn:hover { background: var(--brand-red); color: #fff; border-color: var(--brand-red); }
 
-/* ── COUNTDOWN TIMER ── */
-.hero-countdown {
-  margin-top: 32px;
-  opacity: 0; transform: translateY(20px);
-  animation: fadeUp 0.8s 1.1s forwards;
-}
-.countdown-label {
-  font-size: 12px; font-weight: 600;
-  color: rgba(255,255,255,0.65);
-  letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 12px;
-}
-.countdown-boxes {
-  display: flex; align-items: center; gap: 8px;
-}
-.cdown-box {
-  display: flex; flex-direction: column; align-items: center;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 12px; padding: 12px 16px; min-width: 64px;
-}
-.cdown-box span:first-child {
-  font-size: 28px; font-weight: 800; color: #fff; line-height: 1;
-}
-.cdown-box span:last-child {
-  font-size: 10px; color: rgba(255,255,255,0.5);
-  letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px;
-}
-.cdown-sep {
-  font-size: 24px; font-weight: 700; color: rgba(255,255,255,0.4);
-  margin-bottom: 14px;
-}
-
 /* ── URGENCY BANNER ── */
 .urgency-banner {
   display: flex; align-items: center; gap: 10px;
@@ -1013,12 +964,6 @@ footer {
   background: #FFD700; flex-shrink: 0;
   animation: pulse-dot 1.5s infinite;
 }
-@media (max-width: 768px) {
-  .countdown-boxes { gap: 4px; }
-  .cdown-box { min-width: 52px; padding: 10px 10px; }
-  .cdown-box span:first-child { font-size: 22px; }
-}
-
 @media (max-width: 768px) {
   .price-amount { font-size: 32px; }
   .price-amount sup { font-size: 18px; }

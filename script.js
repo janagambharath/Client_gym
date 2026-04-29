@@ -203,36 +203,3 @@ transformTrack && transformTrack.addEventListener('mouseleave', () => {
   transformTimer = setInterval(() => moveTransform(1), 5000);
 });
 window.addEventListener('resize', () => goTransform(transformIdx));
-
-// ── COUNTDOWN TIMER ──
-// Set launch date — 15 days from now as pre-launch window
-(function() {
-  const launchDate = new Date('2026-04-07T23:59:59');
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const diff = launchDate.getTime() - now;
-    if (diff <= 0) {
-      document.getElementById('cdDays').textContent = '00';
-      document.getElementById('cdHours').textContent = '00';
-      document.getElementById('cdMins').textContent = '00';
-      document.getElementById('cdSecs').textContent = '00';
-      return;
-    }
-    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((diff % (1000 * 60)) / 1000);
-    const pad = n => String(n).padStart(2, '0');
-    const dEl = document.getElementById('cdDays');
-    const hEl = document.getElementById('cdHours');
-    const mEl = document.getElementById('cdMins');
-    const sEl = document.getElementById('cdSecs');
-    if (dEl) dEl.textContent = pad(d);
-    if (hEl) hEl.textContent = pad(h);
-    if (mEl) mEl.textContent = pad(m);
-    if (sEl) sEl.textContent = pad(s);
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-})();
